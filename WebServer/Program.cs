@@ -129,7 +129,6 @@ namespace WebServer
                 var data_text = new StreamReader(request.InputStream,
                                                  request.ContentEncoding)
                                                  .ReadToEnd();
-//                Console.WriteLine(Newtonsoft.Json.JsonConvert.DeserializeObject(data_text));
                 var json = System.Web.HttpUtility.UrlDecode(data_text);
                 JObject requestBody = JObject.Parse(json);
                 Console.WriteLine(requestBody);
